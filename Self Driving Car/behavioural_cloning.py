@@ -312,7 +312,7 @@ model = nvidia_model(0.001)
 model.summary()
 
 #Fitting the augmented training and validation data to the model
-history = model.fit_generator(image_generator(X_train, y_train, 100, 1), steps_per_epoch=300, epochs=10, validation_data=batch_generator(X_valid, y_valid, 100, 0), validation_steps=200, verbose=1, shuffle = 1)
+history = model.fit_generator(image_generator(X_train, y_train, 100, 1), steps_per_epoch=300, epochs=10, validation_data = image_generator(X_valid, y_valid, 100, 0), validation_steps=200, verbose=1, shuffle = 1)
 
 #Plotting training loss vs validation loss to detect overfitting
 plt.plot(history.history['loss'])
