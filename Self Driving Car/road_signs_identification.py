@@ -5,6 +5,8 @@ Created on Sat Oct 24 12:49:34 2019
 @author: Siddhesh
 """
 
+#Referred the tutorial offered at https://www.udemy.com/course/applied-deep-learningtm-the-complete-self-driving-car-course
+
 #Importing the required libraries
 import numpy as np
 import matplotlib.pyplot as plt
