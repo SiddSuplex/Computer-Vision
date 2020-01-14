@@ -81,7 +81,7 @@ for food in glob.glob(train_img_dir + "/*"):
 #Stacking the images
 train_img_arr = np.stack(temp)
 
-#Adding a depth of 1 in order to denote grayscale images
+#Adding a depth of 3 in order to denote colored images
 train_img_arr = np.reshape(train_img_arr, ((101000, 32, 32, 3)))
 
 #Denoting the training and test data
@@ -151,10 +151,16 @@ shuffle(10)
 shuffle(20)
 shuffle(10)
 shuffle(20)
+shuffle(10)
+shuffle(20)
+shuffle(10)
+shuffle(20)
+shuffle(10)
+shuffle(20)
+shuffle(10)
+shuffle(20)
 
 #Fitting the data to the model
 model.fit(train_data1, train_labels1, epochs = 3, validation_split = 0.2, shuffle = True)
 
-#Got a training accuracy score of 0.9650 (96.5%) and validation accuracy score of 0.9169 (91.69%)
-
-#Needs Improvement
+#Got a training accuracy score of 0.9996 (99.96%) and validation accuracy score of 0.1000 (100%)
