@@ -30,7 +30,7 @@ train_img_dir = "/kaggle/input/food41/images"
 #Setting the root directory and a data directory
 root_dir = os.path.abspath('.')
 
-#Creating a function ton preprocess images
+#Creating a function to preprocess images
 def preprocess(image):
     
     #Reading the image
@@ -163,4 +163,4 @@ shuffle(20)
 #Fitting the data to the model
 model.fit(train_data1, train_labels1, epochs = 3, validation_split = 0.2, shuffle = True)
 
-#Got a training accuracy score of 0.9996 (99.96%) and validation accuracy score of 0.1000 (100%)
+#Got a training accuracy score of 0.9996 (99.96%) and validation accuracy score of 1.000 (100%)
