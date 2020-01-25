@@ -37,6 +37,7 @@ from sklearn.preprocessing import LabelEncoder
 import glob
 import cv2
 
+%tensorflow_version 1.x
 import keras
 from keras.models import Sequential
 from keras.layers import Dense, Flatten, Dropout, Conv2D, MaxPooling2D, SpatialDropout2D

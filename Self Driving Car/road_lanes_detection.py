@@ -11,6 +11,7 @@ Created on Sat Oct 15 12:43:04 2019
 import numpy as np
 import matplotlib.pyplot as plt
 
+%tensorflow_version 1.x
 import keras
 from keras.models import Sequential
 from keras.layers import Dense
