@@ -223,7 +223,7 @@ for epoch in range(epochs):
 
 #Displaying the fake images generated towrds the start of training
 from skimage.io import imread
-img_grid = imread('gan_images/3.png')
+img_grid = imread('gan_images/200.png')
 plt.imshow(img_grid)
 
 #Displaying the fake images generated towards the end of training
