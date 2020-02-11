@@ -64,7 +64,7 @@ for img_dir in glob.glob(original_img_dir + "/*"):
     #Storing the preprocessed image in the temporary array
     temp.append(img)
 
-    #Tracking the animals and the image count
+    #Tracking the pokemon and the image count
     print(os.path.basename(img_dir), " ", count, "\n")
 
     #Incrementing count

@@ -70,7 +70,7 @@ for food in glob.glob(train_img_dir + "/*"):
         #Storing the preprocessed image in the temporary array
         temp.append(img)
         
-        #Tracking the animals and the image count
+        #Tracking the food and the image count
         print(os.path.basename(food), count, )
 
         #Storing the labels in the empty array
