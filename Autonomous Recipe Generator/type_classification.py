@@ -17,9 +17,11 @@ from sklearn.model_selection import cross_val_predict
 
 import random
 
+import pickle
+
 #Loading the data
-data1 = np.array(pd.read_csv("/content/drive/My Drive/Colab Notebooks/Computer Vision/Food 101/labels.txt", header = None))
-data2 = np.array(pd.read_csv("/content/drive/My Drive/Colab Notebooks/Computer Vision/Food 101/labels2.txt", header = None))
+data1 = np.array(pd.read_csv("labels.txt", header = None))
+data2 = np.array(pd.read_csv("labels2.txt", header = None))
 
 #Creating empty arrays to store the food name and the food type
 food_name = []
@@ -71,5 +73,9 @@ for i in prediction:
 #Calculating accuracy of the model
 accuracy = accuracy_score(food_type, result)
 print('Accuracy Is : %g%%' %(accuracy * 100))
+
+#Saving the model in a file
+filename = 'extra_trees_model.sav'
+pickle.dump(model, open(filename, 'wb'))
 
 #Got an accuracy score of 0.999911 (99.99%)

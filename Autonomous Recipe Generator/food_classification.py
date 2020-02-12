@@ -15,7 +15,7 @@ from sklearn.preprocessing import LabelEncoder
 import glob
 import cv2
 
-%tensorflow_version 1.x
+#%tensorflow_version 1.x
 import keras
 from keras.models import Sequential
 from keras.layers import Dense, Flatten, Dropout, Conv2D, MaxPooling2D, SpatialDropout2D
@@ -25,8 +25,10 @@ from keras.applications.vgg16 import VGG16
 import os
 import random
 
+import pickle
+
 #Specifying the data paths
-train_img_dir = "/kaggle/input/food41/images"
+train_img_dir = "train"
 
 #Setting the root directory and a data directory
 root_dir = os.path.abspath('.')
@@ -164,4 +166,8 @@ shuffle(20)
 #Fitting the data to the model
 model.fit(train_data1, train_labels1, epochs = 3, validation_split = 0.2, shuffle = True)
 
-#Got a training accuracy score of 0.9996 (99.96%) and validation accuracy score of 1.000 (100%)
+#Saving the model in a file
+filename = 'vgg_model.sav'
+pickle.dump(model, open(filename, 'wb'))
+
+#Got a training accuracy score of 1.000 (100%) and validation accuracy score of 1.000 (100%)
