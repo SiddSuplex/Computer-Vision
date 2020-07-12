@@ -17,7 +17,7 @@ import cv2
 
 #%tensorflow_version 1.x
 import keras
-from keras.models import Sequential
+from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Flatten, Dropout, Conv2D, MaxPooling2D, SpatialDropout2D
 from keras.optimizers import Adam
 from keras.applications.vgg16 import VGG16
@@ -166,8 +166,7 @@ shuffle(20)
 #Fitting the data to the model
 model.fit(train_data1, train_labels1, epochs = 3, validation_split = 0.2, shuffle = True)
 
-#Saving the model in a file
-filename = 'vgg_model.sav'
-pickle.dump(model, open(filename, 'wb'))
+#Saving the model
+model.save("vgg_model.h5")
 
 #Got a training accuracy score of 1.000 (100%) and validation accuracy score of 1.000 (100%)
